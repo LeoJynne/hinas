@@ -53,17 +53,6 @@ if [ -f "$config_file" ]; then
         echo -e "${RED}更新已取消。${NC}"
     fi
 fi
-# 检查是否已存在定时任务
-if ! crontab -l | grep -q "*/5 * * * *  bash /root/Cloudflare_ddns.sh"; then
-    # 添加定时任务
-    (crontab -l ; echo "*/5 * * * *  bash /root/Cloudflare_ddns.sh") | crontab -
-fi
-
-# 检查是否已存在日志清空任务
-if ! crontab -l | grep -q "> /root/cloudflare_ddns.log"; then
-    # 添加日志清空任务
-    (crontab -l ; echo "0 * * * * > /root/cloudflare_ddns.log") | crontab -
-fi
 
 # 其他配置信息
 ipv4_api="ipv4.icanhazip.com"
