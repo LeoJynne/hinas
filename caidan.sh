@@ -54,7 +54,6 @@ function unInstall-caidan() {
         rm -rf /usr/bin/caidan
         rm -rf /usr/sbin/caidan
         echo -e "${GREEN}------------------------------------\n
-            快捷方式卸载完成\n
             脚本卸载完成\n
             ------------------------------------${NC}" | sed -e 's/^[[:space:]]*//'
         exit 1
