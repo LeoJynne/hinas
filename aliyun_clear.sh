@@ -64,9 +64,9 @@ fast_triger_update()
     fi
     fi
     
-    newsh=$(curl -k -s "https://xiaoyahelper.zengge99.eu.org/aliyun_clear.sh" 2>/dev/null)
+    newsh=$(curl -k -s "https://cdn.jsdelivr.net/gh/LX-webo/hinas@main/aliyun_clear.sh" 2>/dev/null)
     if [ -z "$newsh" ];then
-        newsh=$(curl -k -s "https://xiaoyahelper.zngle.cf/aliyun_clear.sh" 2>/dev/null)
+        newsh=$(curl -k -s "https://cdn.jsdelivr.net/gh/LX-webo/hinas@main/aliyun_clear.sh" 2>/dev/null)
     fi
 latest_ver=$(echo "$newsh" | grep "^ver=" | tr -d '"ver=')
     if [ "$latest_ver"x = x ] || [ "$ver"x = "$latest_ver"x ];then
