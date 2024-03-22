@@ -186,10 +186,10 @@ ${NC}"
 
             # Swap设置脚本
             function swap() {
-                read -p "请输入 vm.swappiness 的值 (回车默认为 10): " swappiness_value
+                read -p "请输入 vm.swappiness 的值 (回车默认为 60): " swappiness_value
 
-                # 如果没有输入，默认值为 10
-                swappiness_value=${swappiness_value:-10}
+                # 如果没有输入，默认值为 60
+                swappiness_value=${swappiness_value:-60}
 
                 # 检查是否已存在 vm.swappiness 的设置
                 if grep -q "^vm.swappiness" /etc/sysctl.conf; then
