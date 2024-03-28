@@ -1287,7 +1287,7 @@ opentoken获取链接：|   https://alist.nn.ci/zh/guide/drivers/aliyundrive_ope
                     read -p "是否准备好安装所需文件？（y/n): " confirmation
 
                     if [[ $confirmation == "y" ]]; then
-                        bash -c "$(curl http://docker.xiaoya.pro/update_new.sh)"
+                        bash -c "$(curl http://docker.xiaoya.pro/update_new.sh)" -s host
                         # 图标
                         curl -o /var/www/html/img/png/xiaoya.png https://raw.githubusercontent.com/LX-webo/hinas/main/xiaoya.png
                         cat <<EOF >/var/www/html/icons_wan/xiaoya.html
