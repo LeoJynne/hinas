@@ -1684,6 +1684,8 @@ EOF
             </li>
 EOF
         echo -e "${GREEN}安装完成，刷新点击主页图标${NC}"
+	echo "按任意键继续..."
+    	read -n 1 -s -r -p ""
         ;;
 
     renew)
